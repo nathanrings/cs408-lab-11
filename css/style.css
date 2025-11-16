@@ -1,4 +1,99 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+/* == GENERAL PAGE STYLES == */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #1e1e2f;
+  color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  border: 3px dashed #ffd966;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 30px;
+}
+
+/* == TABLE STYLES == */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background-color: #6272a4;
+  color: #fff;
+  font-size: 18px;
+  padding: 14px;
+}
+
+td {
+  background-color: #282a36;
+  border: 1px solid #44475a;
+  padding: 10px;
+  font-size: 16px;
+}
+
+tr:hover td {
+  background-color: #3c3f58;
+}
+
+/* == BUTTONS == */
+button {
+  background-color: #50fa7b;
+  border: none;
+  padding: 10px 18px;
+  color: #282a36;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 8px;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #3fe16e;
+}
+
+td button {
+  background-color: #ff5555;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+td button:hover {
+  background-color: #e04c4c;
+}
+
+/* == FORM STYLES == */
+#form-box {
+  background-color: #6272a4;
+  padding: 25px;
+  width: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255,255,255,0.15);
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #44475a;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* == RESPONSIVE == */
+@media (max-width: 600px) {
+  table, #form-box {
+    width: 95%;
+  }
+  button {
+    width: 90%;
+  }
 }
