@@ -1,18 +1,29 @@
+const API_URL = "https://9o3f790vnk.execute-api.us-east-2.amazonaws.com/items";
+
 window.onload = loaded;
 
-/**
- * Simple Function that will be run when the browser is finished loading.
- */
 function loaded() {
-    // Assign to a variable so we can set a breakpoint in the debugger!
-    const hello = sayHello();
-    console.log(hello);
+    console.log("Page loaded");
+    getItems();
 }
 
-/**
- * This function returns the string 'hello'
- * @return {string} the string hello
- */
-export function sayHello() {
-    return 'hello';
+async function getItems() {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    console.log("Items:", data);
+}
+
+async function putItem(id, name, price) {
+    const res = await fetch(API_URL, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, name, price })
+    });
+
+    console.log(await res.json());
+}
+
+async function deleteItem(id) {
+    const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    console.log(await res.json());
 }
